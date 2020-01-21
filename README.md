@@ -31,3 +31,13 @@ Regardless of how far you take the solution towards completion, please assume yo
 Let us know if you have any questions, and we look forward to seeing your approach.
 
 Good Luck!
+
+#My assumptions and consideration
+
+1. New endpoint for updating greeting is added. localhost:8080/hello/{id}
+
+2. Existing endpoint for creating new greeting is been updated to, localhost:8080/hello/new.
+
+3. UI mockups are given as doc file.
+
+4. Restful End point url naming convention could have been much better, instea of /hello, coult have been /Greetings. 
