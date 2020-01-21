@@ -28,6 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class HelloControllerTest extends MVCIntegrationTest {
 
 	private static final String HELLO_LUKE = "Hello Luke";
+	private static final String UPDATED_MSG = "Update Greeting Message";
 
 	@Test
 	public void getHelloIsOKAndReturnsValidJSON() throws Exception {
@@ -73,6 +74,17 @@ public class HelloControllerTest extends MVCIntegrationTest {
 		final String body = getGreetingBody(hello);
 
 		mockMvc.perform(post("/hello").contentType(MediaType.APPLICATION_JSON)
+		                              .content(body))
+		       .andExpect(status().isOk())
+		       .andExpect(jsonPath("$.message", is(hello.getMessage())));
+	}
+	
+	@Test
+	public void updateGreetingProvided() throws Exception {
+		Greeting hello = new Greeting(UPDATED_MSG);
+		final String body = getGreetingBody(hello);
+
+		mockMvc.perform(post("/hello/default").contentType(MediaType.APPLICATION_JSON)
 		                              .content(body))
 		       .andExpect(status().isOk())
 		       .andExpect(jsonPath("$.message", is(hello.getMessage())));
