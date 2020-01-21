@@ -24,10 +24,18 @@ This task is purposefully open-ended. You are free to come up with your own impl
 
 Extra points for describing a user interface which utilizes the API with the new endpoint. This can be a text document, simple mock-ups, or even an interactive HTML proof-of-concept. Be creative and show us how you approach UI problems.
 
-We understand that not everyone has the same amount of "extra" time. It is also up to you to determine the amount of time you spend on the exercise. So that the reviewer understands how you are defining the scope of work, please clearly indicate your own “Definition of Done” for the task in a README file along with any other pertinent information.
+We understand that not everyone has the same amount of "extra" time. It is also up to you to determine the amount of time you spend on the exercise. So that the reviewer understands how you are defining the scope of work, please clearly indicate your own â€œDefinition of Doneâ€� for the task in a README file along with any other pertinent information.
 
 Regardless of how far you take the solution towards completion, please assume you are writing production code. Your solution should clearly communicate your development style, abilities, and approach to problem solving. 
 
 Let us know if you have any questions, and we look forward to seeing your approach.
 
 Good Luck!
+
+## My Assumptions and Consideration
+
+1. Have written new end point for updating greeting
+
+2. Existing end point for creating new greeting is been updated
+
+3. UI mockups are given as mockup file
