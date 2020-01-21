@@ -40,6 +40,13 @@ public class HelloWorldService {
 		return save(request);
 	}
 
+	public Greeting updateGreeting(String id, Greeting request) {
+		entityValidator.validateUpdate(request);
+
+		request.setId(id);
+		return save(request);
+	}
+
 	public Optional<Greeting> getGreeting(String id) {
 		Greeting greeting = greetings.get(id);
 		if (greeting == null) {

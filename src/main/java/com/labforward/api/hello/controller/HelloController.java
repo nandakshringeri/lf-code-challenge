@@ -30,12 +30,16 @@ public class HelloController {
 	@RequestMapping(value = "/hello/{id}", method = RequestMethod.GET)
 	@ResponseBody
 	public Greeting getHello(@PathVariable String id) {
-		return helloWorldService.getGreeting(id)
-		                        .orElseThrow(() -> new ResourceNotFoundException(GREETING_NOT_FOUND));
+		return helloWorldService.getGreeting(id).orElseThrow(() -> new ResourceNotFoundException(GREETING_NOT_FOUND));
 	}
 
-	@RequestMapping(value = "/hello", method = RequestMethod.POST)
+	@RequestMapping(value = "/hello/new", method = RequestMethod.POST)
 	public Greeting createGreeting(@RequestBody Greeting request) {
 		return helloWorldService.createGreeting(request);
+	}
+
+	@RequestMapping(value = "/hello/{id}", method = RequestMethod.POST)
+	public Greeting updateGreeting(@PathVariable String id, @RequestBody Greeting request) {
+		return helloWorldService.updateGreeting(id, request);
 	}
 }
